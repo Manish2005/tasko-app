@@ -9,13 +9,13 @@
     {
       "id": 2,
       "title": "Go to the gym",
-      "description": "Do at least 30 minutes of cardio exercises",
+      "description": "Do at least 30 minutes of cardio activities",
       "isCompleted": false
     },
     {
       "id": 3,
       "title": "Study for the exam",
-      "description": "Study the chapters 3 and 4 of the fundamentals of macroeconomics book",
+      "description": "Study the chapters 3 and 4 of the fundamentals of Microbiology book",
       "isCompleted": false
     }
   ]
