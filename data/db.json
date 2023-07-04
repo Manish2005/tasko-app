@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Have breakfast",
+      "description": "Drink a coffee and eat a few biscuits",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "title": "Go to the gym",
+      "description": "Do at least 30 minutes of cardio exercises",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "title": "Study for the exam",
+      "description": "Study the chapters 3 and 4 of the fundamentals of macroeconomics book",
+      "isCompleted": false
+    }
+  ]
+}
