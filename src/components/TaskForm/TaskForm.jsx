@@ -25,8 +25,8 @@ export default function TaskForm() {
       name: "description",
       type: "text",
       placeholder: "Description",
-      errorMessage: "Please enter a description",
       label: "Description",
+      errorMessage: "Please enter a description",
       required: true,
     },
     {

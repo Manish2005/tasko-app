@@ -1,6 +1,4 @@
-// import React from "react";
-
-export default function ErrorPage() {
+export default function NotFound() {
   return (
     <div>
       <h1>Error</h1>

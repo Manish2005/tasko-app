@@ -1,11 +1,11 @@
 import { useFetch } from "../../hooks/useFetch";
-import TaskForm from "../TaskForm/TaskForm";
-import Tasks from "../Tasks/Tasks";
+import TaskForm from "../../components/TaskForm/TaskForm";
+import Tasks from "../../components/Tasks/Tasks";
 
 export default function Homepage() {
   const {
     data: tasks,
-    isPending,
+    isLoading,
     error,
   } = useFetch("http://localhost:3000/tasks", {
     type: "GET",
@@ -15,7 +15,7 @@ export default function Homepage() {
     <>
       <h1>Homepage</h1>
       <TaskForm />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} isLoading={isLoading} error={error} />
     </>
   );
 }

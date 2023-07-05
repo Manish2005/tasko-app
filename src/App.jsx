@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import Homepage from "./components/Homepage/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 import Task from "./components/Task/Task";
-import ErrorPage from "./components/ErrorPage/ErrorPage";
+import ErrorPage from "./components/NotFound/NotFound";
 
 export default function App() {
   return (
