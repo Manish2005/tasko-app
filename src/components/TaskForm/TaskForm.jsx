@@ -5,8 +5,9 @@ export default function TaskForm() {
   const [values, setValues] = useState({
     title: "",
     description: "",
-    status: "",
+    status: "not completed",
   });
+  console.log("values", values);
 
   const formInputs = [
     {
@@ -33,7 +34,6 @@ export default function TaskForm() {
       id: 3,
       name: "status",
       type: "text",
-      placeholder: "Status",
       label: "Status",
     },
   ];

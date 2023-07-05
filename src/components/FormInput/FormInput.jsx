@@ -8,17 +8,13 @@ export default function FormInput({
   ...inputProps
 }) {
   const [focused, setFocused] = useState(false);
-  const [selectValue, setSelectValue] = useState();
 
   return (
     <div className="form-input">
       <label>{label}</label>
       {inputProps.name === "status" ? (
-        <select
-          value={selectValue}
-          onChange={(e) => setSelectValue(e.target.value)}
-        >
-          <option value="not-completed">Not Completed</option>
+        <select {...inputProps} onChange={onChange}>
+          <option value="not completed">Not Completed</option>
           <option value="completed">Completed</option>
         </select>
       ) : (
