@@ -17,6 +17,12 @@
       "title": "Study for the exam",
       "description": "Study the chapters 3 and 4 of the fundamentals of Microbiology book",
       "status": "not completed"
+    },
+    {
+      "id": "3079a295",
+      "title": "Go to buy some groceries",
+      "description": "Do not forget to buy milk, eggs, bread and onions",
+      "status": "not completed"
     }
   ]
 }
