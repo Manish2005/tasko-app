@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Homepage from "./pages/Homepage/Homepage";
-import Task from "./components/Task/Task";
-import ErrorPage from "./components/NotFound/NotFound";
 import TaskForm from "./pages/TaskForm/TaskForm";
+import TaskEditForm from "./pages/TaskEditForm/TaskEditForm";
+import Task from "./components/Task/Task";
+import NotFound from "./components/NotFound/NotFound";
 
 export default function App() {
   return (
@@ -11,8 +11,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/create" element={<TaskForm />} />
+        <Route path="/edit/:id" element={<TaskEditForm />} />
         <Route path="/task/:id" element={<Task />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
