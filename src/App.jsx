@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
 import Task from "./components/Task/Task";
 import ErrorPage from "./components/NotFound/NotFound";
-import TaskForm from "./components/TaskForm/TaskForm";
+import TaskForm from "./pages/TaskForm/TaskForm";
 
 export default function App() {
   return (

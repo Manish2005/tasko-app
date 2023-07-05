@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { formInputs } from "./formInputs";
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../../components/FormInput/FormInput";
 
 export default function TaskForm() {
   const navigate = useNavigate();
