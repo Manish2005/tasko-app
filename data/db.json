@@ -1,22 +1,22 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "2fcf01e0",
       "title": "Have breakfast",
       "description": "Drink a coffee and eat a few biscuits",
-      "status": "Not completed"
+      "status": "not completed"
     },
     {
-      "id": 2,
+      "id": "1fc3rxe0",
       "title": "Go to the gym",
       "description": "Do at least 30 minutes of cardio activities",
-      "status": "Not completed"
+      "status": "not completed"
     },
     {
-      "id": 3,
+      "id": "9zcse31k",
       "title": "Study for the exam",
       "description": "Study the chapters 3 and 4 of the fundamentals of Microbiology book",
-      "status": "Not completed"
+      "status": "not completed"
     }
   ]
 }

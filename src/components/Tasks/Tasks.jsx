@@ -12,7 +12,7 @@ export default function Tasks({ tasks, isLoading, error }) {
             key={task.id}
             title={task.title}
             description={task.description}
-            isCompleted={task.isCompleted}
+            status={task.status}
           />
         ))}
     </div>

@@ -1,12 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
-export const useFetch = (url, _options) => {
+export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  // use useRef to wrap an object/array argument which is a useEffect dependency
-  const options = useRef(_options).current;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -39,7 +36,7 @@ export const useFetch = (url, _options) => {
     return () => {
       controller.abort();
     };
-  }, [url, options]);
+  }, [url]);
 
   return { data, isLoading, error };
 };

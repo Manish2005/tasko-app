@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import FormInput from "../FormInput/FormInput";
 
 export default function TaskForm() {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     title: "",
     description: "",
     status: "not completed",
   });
-  console.log("values", values);
 
   const formInputs = [
     {
@@ -16,9 +18,8 @@ export default function TaskForm() {
       type: "text",
       placeholder: "Title",
       label: "Title",
-      errorMessage:
-        "The title should be 3-50 characters long and without special characters",
-      pattern: "^[A-Za-z0-9]{3,50}$",
+      errorMessage: "The title must be 3-50 characters long",
+      pattern: "^.{3,50}$",
       required: true,
     },
     {
@@ -40,6 +41,34 @@ export default function TaskForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const uniqueId = uuidv4().slice(0, 8);
+
+    const data = {
+      id: uniqueId,
+      title: values.title,
+      description: values.description,
+      status: values.status,
+    };
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch("http://localhost:3000/tasks", requestOptions)
+      .then((res) => res.json())
+      .then((data) => {
+        // Handle the response data
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    navigate("/");
   };
 
   const onChange = (e) => {
