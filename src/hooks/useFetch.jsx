@@ -26,7 +26,7 @@ export const useFetch = (url, _options) => {
         setError(null);
       } catch (err) {
         if (err.name === "AbortError") {
-          console.error("The request was aborted");
+          throw new Error(err);
         } else {
           setIsLoading(false);
           setError("Could not fetch the data");

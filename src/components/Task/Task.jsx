@@ -1,11 +1,11 @@
 import "./task.css";
 
-export default function Task() {
+export default function Task({ title, description, isCompleted }) {
   return (
     <div className="task-container">
-      <h1>Task title</h1>
-      <p>Description</p>
-      <p>Status</p>
+      <p>{title}</p>
+      <p>{description}</p>
+      <p>{isCompleted}</p>
     </div>
   );
 }

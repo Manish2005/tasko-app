@@ -16,8 +16,8 @@ export default function TaskForm() {
       placeholder: "Title",
       label: "Title",
       errorMessage:
-        "The title should be 3-30 characters long and without special characters",
-      pattern: "^[A-Za-z0-9]{3,30}$",
+        "The title should be 3-50 characters long and without special characters",
+      pattern: "^[A-Za-z0-9]{3,50}$",
       required: true,
     },
     {
