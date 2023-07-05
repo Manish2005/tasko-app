@@ -10,6 +10,7 @@ export default function Tasks({ tasks, isLoading, error }) {
         tasks.map((task) => (
           <Task
             key={task.id}
+            id={task.id}
             title={task.title}
             description={task.description}
             status={task.status}
