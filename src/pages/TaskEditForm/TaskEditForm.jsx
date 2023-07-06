@@ -67,7 +67,7 @@ export default function TaskEditForm() {
               {...input}
             />
           ))}
-          <button>Edit</button>
+          <button>Update</button>
         </form>
       </div>
     </>

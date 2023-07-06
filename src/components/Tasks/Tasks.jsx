@@ -1,10 +1,17 @@
+import { useFetch } from "../../hooks/useFetch";
 import Task from "../Task/Task";
 
-export default function Tasks({ tasks, isLoading, error }) {
+export default function Tasks() {
+  const {
+    data: tasks,
+    isLoading,
+    error,
+  } = useFetch("http://localhost:3000/tasks");
+
   return (
     <div>
       <h1>List of tasks</h1>
-      {isLoading && <div>Loading tasks...</div>}
+      {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {tasks &&
         tasks.map((task) => (
@@ -12,7 +19,6 @@ export default function Tasks({ tasks, isLoading, error }) {
             key={task.id}
             id={task.id}
             title={task.title}
-            description={task.description}
             status={task.status}
           />
         ))}

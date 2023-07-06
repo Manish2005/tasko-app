@@ -15,16 +15,16 @@ An app that allow users to create, edit, delete and manage their tasks.
 This project is created with:
 
 - REACT
-- JSON Server
 - HTML
 - CSS
+- JSON Server
 - Vite
 
 ## Setup
 
-1. Make sure that [nvm](https://github.com/nvm-sh/nvm), [npm](https://www.npmjs.com/) are installed globally
+1. Make sure that [nvm](https://github.com/nvm-sh/nvm) and [npm](https://www.npmjs.com/) are installed globally
 
-2. Install the correct version of Node running the following command in the project root directory
+2. Install the correct version of Node running the following command in the root directory
 
    ```shell
    nvm install
