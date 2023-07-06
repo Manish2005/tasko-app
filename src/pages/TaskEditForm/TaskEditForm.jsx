@@ -47,7 +47,7 @@ export default function TaskEditForm() {
       .catch((err) => {
         throw new Error(err);
       });
-    navigate("/");
+    navigate(`/task/${id}`);
   };
 
   const onChange = (e) => {
