@@ -12,17 +12,14 @@ export default function Task({ id, title, status }) {
 
   const handleToggle = () => {
     setIsCompleted((prev) => !prev);
-
-    let newData;
-    if (status === "completed") {
-      newData = {
-        status: "not completed",
-      };
-    } else {
-      newData = {
-        status: "completed",
-      };
-    }
+    const newData =
+      status === "completed"
+        ? {
+            status: "not completed",
+          }
+        : {
+            status: "completed",
+          };
 
     const requestOptions = {
       method: "PATCH",

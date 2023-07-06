@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { formInputs } from "./formInputs";
-import FormInput from "../../components/FormInput/FormInput";
 import { useFetch } from "../../hooks/useFetch";
+import FormInput from "../../components/FormInput/FormInput";
 
 export default function TaskEditForm() {
   const navigate = useNavigate();
@@ -56,6 +57,9 @@ export default function TaskEditForm() {
 
   return (
     <>
+      <Link to={`/task/${id}`}>
+        <ArrowBackIcon />
+      </Link>
       <div>
         <form onSubmit={handleEdit}>
           <h1>Edit a task</h1>

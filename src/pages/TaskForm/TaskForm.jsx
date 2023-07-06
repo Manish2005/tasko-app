@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { formInputs } from "./formInputs";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import FormInput from "../../components/FormInput/FormInput";
 
 export default function TaskForm() {
@@ -45,6 +46,9 @@ export default function TaskForm() {
 
   return (
     <>
+      <Link to="/">
+        <ArrowBackIcon />
+      </Link>
       <div>
         <form onSubmit={handleSubmit}>
           <h1>Create a task</h1>

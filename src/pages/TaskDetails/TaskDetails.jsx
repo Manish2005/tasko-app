@@ -1,5 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function TaskDetails() {
   const navigate = useNavigate();
@@ -10,6 +11,9 @@ export default function TaskDetails() {
 
   return (
     <>
+      <Link to="/">
+        <ArrowBackIcon />
+      </Link>
       {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {data && (
