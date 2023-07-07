@@ -7,12 +7,9 @@ export default function Homepage() {
 
   return (
     <div className="container-homepage">
-      <div className="section-header">
-        <h1>Tasko</h1>
-        <button onClick={() => navigate("/create")} className="btn">
-          Add new task
-        </button>
-      </div>
+      <button onClick={() => navigate("/create")} className="btn">
+        Add new task
+      </button>
       <Tasks />
     </div>
   );

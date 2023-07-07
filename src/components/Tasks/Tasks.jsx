@@ -1,5 +1,6 @@
 import { useFetch } from "../../hooks/useFetch";
 import Task from "../Task/Task";
+import "./tasks.css";
 
 export default function Tasks() {
   const {
@@ -9,7 +10,7 @@ export default function Tasks() {
   } = useFetch("http://localhost:3000/tasks");
 
   return (
-    <div>
+    <div className="container-list">
       <h1>List of tasks</h1>
       {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
