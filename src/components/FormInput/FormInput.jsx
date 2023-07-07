@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import "./formInput.css";
 
 export default function FormInput({
@@ -22,7 +23,8 @@ export default function FormInput({
           <input
             {...inputProps}
             onChange={onChange}
-            onBlur={(e) => setFocused(true)}
+            onBlur={() => setFocused(true)}
+            // eslint-disable-next-line react/no-unknown-property
             focused={focused.toString()}
           />
           <span>{errorMessage}</span>
@@ -31,3 +33,9 @@ export default function FormInput({
     </div>
   );
 }
+
+FormInput.propTypes = {
+  label: PropTypes.string,
+  errorMessage: PropTypes.string,
+  onChange: PropTypes.func,
+};

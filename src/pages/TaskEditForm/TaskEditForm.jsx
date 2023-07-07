@@ -24,6 +24,7 @@ export default function TaskEditForm() {
         status: data.status,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const handleEdit = (e) => {
