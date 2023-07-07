@@ -37,17 +37,26 @@ export default function Task({ id, title, status }) {
       });
   };
 
+  const iconStyles = {
+    cursor: "pointer",
+  };
+
   return (
     <div className="container-task">
       <p>{title}</p>
-      <button onClick={() => navigate(`/task/${id}`)} className="btn">
-        Details
-      </button>
-      {isCompleted ? (
-        <CheckBoxIcon onClick={handleToggle} />
-      ) : (
-        <CheckBoxOutlineBlankIcon onClick={handleToggle} />
-      )}
+      <div className="container-details">
+        <button
+          onClick={() => navigate(`/task/${id}`)}
+          className="btn btn-details"
+        >
+          Details
+        </button>
+        {isCompleted ? (
+          <CheckBoxIcon onClick={handleToggle} sx={iconStyles} />
+        ) : (
+          <CheckBoxOutlineBlankIcon onClick={handleToggle} sx={iconStyles} />
+        )}
+      </div>
     </div>
   );
 }

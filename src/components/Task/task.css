@@ -1,9 +1,25 @@
 .container-task {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  margin: 1rem 0;
+  margin-top: 1.5rem;
   border-radius: 8px;
   border: solid 1px var(--dark-pink);
+}
+
+.container-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-details {
+  margin-right: 0.5rem;
+  background-color: var(--light-pink);
+}
+
+.btn-details:hover {
+  background-color: var(--light-pink);
 }

@@ -1,4 +1,5 @@
 .container-list {
+  width: 55%;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
