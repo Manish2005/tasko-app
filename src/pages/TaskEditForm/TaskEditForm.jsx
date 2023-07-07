@@ -72,7 +72,7 @@ export default function TaskEditForm() {
               {...input}
             />
           ))}
-          <button>Update</button>
+          <button className="btn">Update</button>
         </form>
       </div>
     </>

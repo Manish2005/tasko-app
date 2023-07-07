@@ -60,7 +60,7 @@ export default function TaskForm() {
               {...input}
             />
           ))}
-          <button>Submit</button>
+          <button className="btn">Submit</button>
         </form>
       </div>
     </>

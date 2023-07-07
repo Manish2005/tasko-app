@@ -1,11 +1,10 @@
 .form-input {
   display: flex;
   flex-direction: column;
-  width: 24rem;
 }
 
 label {
-  font-size: 12px;
+  font-size: 2rem;
 }
 
 span {

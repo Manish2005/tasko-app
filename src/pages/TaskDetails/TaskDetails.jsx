@@ -23,7 +23,9 @@ export default function TaskDetails() {
             <p>{data.title}</p>
             <p>{data.description}</p>
             <p>{data.status}</p>
-            <button onClick={() => navigate(`/edit/${id}`)}>Edit</button>
+            <button onClick={() => navigate(`/edit/${id}`)} className="btn">
+              Edit
+            </button>
           </div>
         </div>
       )}

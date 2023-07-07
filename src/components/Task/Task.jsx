@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import "./task.css";
@@ -37,9 +38,11 @@ export default function Task({ id, title, status }) {
   };
 
   return (
-    <div className="task-container">
+    <div className="container-task">
       <p>{title}</p>
-      <button onClick={() => navigate(`/task/${id}`)}>Details</button>
+      <button onClick={() => navigate(`/task/${id}`)} className="btn">
+        Details
+      </button>
       {isCompleted ? (
         <CheckBoxIcon onClick={handleToggle} />
       ) : (
@@ -48,3 +51,9 @@ export default function Task({ id, title, status }) {
     </div>
   );
 }
+
+Task.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  status: PropTypes.string,
+};
