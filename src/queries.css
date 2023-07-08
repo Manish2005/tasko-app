@@ -1,0 +1,59 @@
+/************************************/
+/* BELOW 1200px (Landscape Tablets) */
+/************************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets)  */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 70%;
+  }
+
+  .form-select-status {
+    width: 40%;
+  }
+
+  .container-list {
+    width: 70%;
+  }
+
+  .container-task-details {
+    width: 80%;
+  }
+}
+
+/*********************************/
+/* BELOW 704px (Smaller tablets) */
+/*********************************/
+
+@media (max-width: 44em) {
+  .container-task-details {
+    width: 90%;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones)   */
+/**************************/
+
+@media (max-width: 34em) {
+  .container-form {
+    width: 90%;
+  }
+
+  .form-select-status {
+    width: 50%;
+  }
+
+  .container-list {
+    width: 90%;
+  }
+}
