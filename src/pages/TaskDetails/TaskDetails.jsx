@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import "./taskDetails.css";
 
 export default function TaskDetails() {
   const navigate = useNavigate();
@@ -9,26 +10,45 @@ export default function TaskDetails() {
     `http://localhost:3000/tasks/${id}`
   );
 
+  const iconStyles = {
+    cursor: "pointer",
+    fontSize: "1.8rem",
+    color: "var(--light-pink)",
+    marginBottom: "1rem",
+  };
+
   return (
     <>
-      <Link to="/">
-        <ArrowBackIcon />
-      </Link>
-      {isLoading && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {data && (
-        <div>
-          <h1>Task Details</h1>
-          <div>
-            <p>{data.title}</p>
-            <p>{data.description}</p>
-            <p>{data.status}</p>
-            <button onClick={() => navigate(`/edit/${id}`)} className="btn">
-              Edit
-            </button>
+      <div className="container-page-details">
+        {isLoading && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        {data && (
+          <div className="container-task-details">
+            <Link to="/">
+              <ArrowBackIcon sx={iconStyles} />
+            </Link>
+            <h1>Task Details</h1>
+            <div className="container-task-details-text">
+              <p>
+                <span className="font-bold">Title: </span> {data.title}
+              </p>
+              <p>
+                <span className="font-bold">Description: </span>
+                {data.description}
+              </p>
+              <p>
+                <span className="font-bold">Status: </span> {data.status}
+              </p>
+              <button
+                onClick={() => navigate(`/edit/${id}`)}
+                className="btn btn-edit"
+              >
+                Edit
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }

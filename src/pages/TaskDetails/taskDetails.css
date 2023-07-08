@@ -1,0 +1,20 @@
+.container-page-details {
+  display: flex;
+  justify-content: center;
+}
+
+.container-task-details {
+  width: 70%;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: solid 1px var(--light-pink);
+  border-radius: 8px;
+}
+
+.container-task-details-text p {
+  margin: 1rem 0;
+}
+
+.btn-edit:hover {
+  background-color: var(--light-pink);
+}

@@ -5,7 +5,7 @@ export const formInputs = [
     type: "text",
     placeholder: "Title",
     label: "Title",
-    errorMessage: "The title must be 3-50 characters long",
+    errorMessage: "Please enter 3-50 characters",
     pattern: "^.{3,50}$",
     required: true,
   },

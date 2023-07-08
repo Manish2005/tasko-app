@@ -56,10 +56,17 @@ export default function TaskEditForm() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  const iconStyles = {
+    cursor: "pointer",
+    fontSize: "1.8rem",
+    color: "var(--light-pink)",
+    marginBottom: "1rem",
+  };
+
   return (
     <>
       <Link to={`/task/${id}`}>
-        <ArrowBackIcon />
+        <ArrowBackIcon sx={iconStyles} />
       </Link>
       <div>
         <form onSubmit={handleEdit}>

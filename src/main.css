@@ -10,7 +10,12 @@
   --light-pink: #da4aad;
   --white: #ffffff;
   --green: #249f43;
+  --red: #f43b53;
 }
+
+/*****************/
+/* GLOBAL STYLES */
+/*****************/
 
 * {
   padding: 0;
@@ -30,6 +35,53 @@ body {
   line-height: 1;
 }
 
+/****************/
+/* FORMS STYLES */
+/****************/
+
+.container-page-form {
+  display: flex;
+  justify-content: center;
+}
+
+.container-form {
+  width: 70%;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: solid 1px var(--light-pink);
+  border-radius: 8px;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.form-error-message {
+  font-size: 0.75rem;
+  color: var(--red);
+  display: none;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  border-radius: 8px;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid var(--red);
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
@@ -44,4 +96,8 @@ body {
   background-color: var(--dark-pink);
   color: var(--white);
   transition: all 0.3s;
+}
+
+.font-bold {
+  font-weight: 700;
 }

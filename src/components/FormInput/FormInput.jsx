@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./formInput.css";
 
 export default function FormInput({
   label,
@@ -27,7 +26,7 @@ export default function FormInput({
             // eslint-disable-next-line react/no-unknown-property
             focused={focused.toString()}
           />
-          <span>{errorMessage}</span>
+          <span className="form-error-message">{errorMessage}</span>
         </>
       )}
     </div>

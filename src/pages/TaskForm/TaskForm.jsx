@@ -44,12 +44,19 @@ export default function TaskForm() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  const iconStyles = {
+    cursor: "pointer",
+    fontSize: "1.8rem",
+    color: "var(--light-pink)",
+    marginBottom: "1rem",
+  };
+
   return (
-    <>
-      <Link to="/">
-        <ArrowBackIcon />
-      </Link>
-      <div>
+    <div className="container-page-form">
+      <div className="container-form">
+        <Link to="/">
+          <ArrowBackIcon sx={iconStyles} />
+        </Link>
         <form onSubmit={handleSubmit}>
           <h1>Create a task</h1>
           {formInputs.map((input) => (
@@ -63,6 +70,6 @@ export default function TaskForm() {
           <button className="btn">Submit</button>
         </form>
       </div>
-    </>
+    </div>
   );
 }

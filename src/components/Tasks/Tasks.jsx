@@ -8,7 +8,6 @@ export default function Tasks() {
     isLoading,
     error,
   } = useFetch("http://localhost:3000/tasks");
-  console.log("tasks", tasks);
 
   return (
     <div className="container-list">
