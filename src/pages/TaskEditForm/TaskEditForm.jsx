@@ -64,11 +64,11 @@ export default function TaskEditForm() {
   };
 
   return (
-    <>
-      <Link to={`/task/${id}`}>
-        <ArrowBackIcon sx={iconStyles} />
-      </Link>
-      <div>
+    <div className="container-page-form">
+      <div className="container-form">
+        <Link to={`/task/${id}`}>
+          <ArrowBackIcon sx={iconStyles} />
+        </Link>
         <form onSubmit={handleEdit}>
           <h1>Edit a task</h1>
           {formInputs.map((input) => (
@@ -79,9 +79,9 @@ export default function TaskEditForm() {
               {...input}
             />
           ))}
-          <button className="btn">Update</button>
+          <button className="btn btn-form">Update</button>
         </form>
       </div>
-    </>
+    </div>
   );
 }

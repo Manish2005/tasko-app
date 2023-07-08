@@ -13,7 +13,11 @@ export default function FormInput({
     <div className="form-input">
       <label>{label}</label>
       {inputProps.name === "status" ? (
-        <select {...inputProps} onChange={onChange}>
+        <select
+          {...inputProps}
+          onChange={onChange}
+          className="form-select-status"
+        >
           <option value="not completed">Not Completed</option>
           <option value="completed">Completed</option>
         </select>

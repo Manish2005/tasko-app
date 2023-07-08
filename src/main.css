@@ -82,6 +82,17 @@ input:invalid[focused="true"] ~ span {
   display: block;
 }
 
+.form-select-status {
+  width: 20%;
+  border-radius: 4px;
+  padding: 0.3rem;
+  margin-top: 0.8rem;
+}
+
+.btn-form {
+  margin-top: 1.2rem;
+}
+
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
