@@ -109,6 +109,10 @@ input:invalid[focused="true"] ~ span {
   transition: all 0.3s;
 }
 
+.btn:hover {
+  background-color: var(--light-pink);
+}
+
 .font-bold {
   font-weight: 700;
 }

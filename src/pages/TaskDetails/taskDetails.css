@@ -14,7 +14,3 @@
 .container-task-details-text p {
   margin: 1rem 0;
 }
-
-.btn-edit:hover {
-  background-color: var(--light-pink);
-}

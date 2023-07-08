@@ -5,7 +5,3 @@
   justify-content: center;
   margin-top: 2rem;
 }
-
-.btn-add-task:hover {
-  background-color: var(--light-pink);
-}

@@ -19,7 +19,3 @@
   margin-right: 0.5rem;
   background-color: var(--light-pink);
 }
-
-.btn-details:hover {
-  background-color: var(--light-pink);
-}
