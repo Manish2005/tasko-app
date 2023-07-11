@@ -1,13 +1,14 @@
-import { useFetch } from "../../hooks/useFetch";
+import {useFetch} from "../../hooks/useFetch";
 import Task from "../Task/Task";
 import "./tasks.css";
+import {APP_CONSTANTS} from "../../constants.js";
 
 export default function Tasks() {
   const {
     data: tasks,
     isLoading,
     error,
-  } = useFetch("http://localhost:3000/tasks");
+  } = useFetch(`${APP_CONSTANTS.HOST}/tasks`);
 
   return (
     <div className="container-list">

@@ -2,6 +2,7 @@
 /* BELOW 1200px (Landscape Tablets) */
 /************************************/
 
+/* why em? */
 @media (max-width: 75em) {
   html {
     font-size: 80%;

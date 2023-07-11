@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
-import { formInputs } from "./formInputs";
+import {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {v4 as uuidv4} from "uuid";
+import {formInputs} from "./formInputs";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import FormInput from "../../components/FormInput/FormInput";
 
-export default function TaskForm() {
+export const TaskForm = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     title: "",
@@ -41,7 +41,7 @@ export default function TaskForm() {
   };
 
   const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+    setValues({...values, [e.target.name]: e.target.value});
   };
 
   const iconStyles = {
@@ -55,7 +55,7 @@ export default function TaskForm() {
     <div className="container-page-form">
       <div className="container-form">
         <Link to="/">
-          <ArrowBackIcon sx={iconStyles} />
+          <ArrowBackIcon sx={iconStyles}/>
         </Link>
         <form onSubmit={handleSubmit}>
           <h1>Create a task</h1>

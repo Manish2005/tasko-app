@@ -1,14 +1,22 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {useCallback, useEffect, useState} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { formInputs } from "./formInputs";
-import { useFetch } from "../../hooks/useFetch";
+import {formInputs} from "./formInputs";
+import {useFetch} from "../../hooks/useFetch";
 import FormInput from "../../components/FormInput/FormInput";
+import {APP_CONSTANTS} from '../../constants'
 
-export default function TaskEditForm() {
+const iconStyles = {
+  cursor: "pointer",
+  fontSize: "1.8rem",
+  color: "var(--light-pink)",
+  marginBottom: "1rem",
+};
+
+export const TaskEditForm = () => {
   const navigate = useNavigate();
-  const { id } = useParams();
-  const { data } = useFetch(`http://localhost:3000/tasks/${id}`);
+  const {id} = useParams();
+  const {data} = useFetch(`${APP_CONSTANTS.HOST}/tasks/${id}`);
   const [values, setValues] = useState({
     title: "",
     description: "",
@@ -18,16 +26,14 @@ export default function TaskEditForm() {
   useEffect(() => {
     if (data) {
       setValues({
-        ...values,
         title: data.title,
         description: data.description,
         status: data.status,
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const handleEdit = (e) => {
+  const handleEdit = useCallback((e) => {
     e.preventDefault();
 
     const newData = {
@@ -44,30 +50,23 @@ export default function TaskEditForm() {
       body: JSON.stringify(newData),
     };
 
-    fetch(`http://localhost:3000/tasks/${id}`, requestOptions)
+    fetch(`${APP_CONSTANTS.HOST}/tasks/${id}`, requestOptions)
       .then((res) => res.json())
       .catch((err) => {
         throw new Error(err);
       });
     navigate(`/task/${id}`);
-  };
+  }, [id, navigate, values]);
 
   const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
-  const iconStyles = {
-    cursor: "pointer",
-    fontSize: "1.8rem",
-    color: "var(--light-pink)",
-    marginBottom: "1rem",
+    setValues({...values, [e.target.name]: e.target.value});
   };
 
   return (
     <div className="container-page-form">
       <div className="container-form">
         <Link to={`/task/${id}`}>
-          <ArrowBackIcon sx={iconStyles} />
+          <ArrowBackIcon sx={iconStyles}/>
         </Link>
         <form onSubmit={handleEdit}>
           <h1>Edit a task</h1>

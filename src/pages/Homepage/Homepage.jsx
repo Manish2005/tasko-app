@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Tasks from "../../components/Tasks/Tasks";
 import "./homepage.css";
 
-export default function Homepage() {
+// prefer named exports
+export const Homepage = () => {
   const navigate = useNavigate();
 
   return (
@@ -10,7 +11,7 @@ export default function Homepage() {
       <button onClick={() => navigate("/create")} className="btn btn-add-task">
         Add new task
       </button>
-      <Tasks />
+      <Tasks/>
     </div>
   );
 }
